@@ -1,0 +1,84 @@
+# Cross View 3D Human Pose Tracking
+TEST_FUNCTION: 'PersonTrack_Project3DPose'
+PIPELINE_COMBINATION:
+        DETECT_MODEL: YOLOv3
+        POSE_MODEL: HRPose
+        PERSON_MATCHER: 'Iterative'
+        BUILD_3D: 'SVD'
+        CONF_THRESHOLD: 0.4
+DATASET:
+        DATA_TYPE: 'Images'
+        TEST_DATASET: 'CampusSeq1'
+        FOLDERS_ORDER:
+                - Camera0
+                - Camera1
+                - Camera2
+        ROOT: '../CatchImage/CampusSeq1'
+        # ROOT: '/mnt/nvme0n1p1/CampusSeq1'
+        CALIBRATION_FILE: 'camera_parameter.pickle'
+        GT_FILE: 'annotation_2d.json'
+        DATA_FORMAT: '*.jpg'
+        TEST_RANGE:
+                - 347
+                - 751
+        EVAL_RANGE:
+                - - 350
+                  - 471
+                - - 650
+                  - 751
+                # - - 350
+                #   - 751
+VISUALIZATION: True
+SAVE_IMAGE: True
+OUTPUT: '../results/PersonPoseDetectResult'
+# PersonDetectResult, PersonPoseDetectResult, Person3DPoseResult, PersonSimilarityResult, CrossViewTrackingResult
+
+# DETECT_MODELS HYPER PARAMETERS
+DETECT_MODELS:
+        YOLOV3:
+                NAME: 'YOLOv3'
+                CFG: "lib/backend/YOLOv3/cfg/yolo_v3.cfg"
+                WEIGHT: "lib/backend/YOLOv3/weight/yolov3.weights"
+                CLASS_NAMES: "lib/backend/YOLOv3/cfg/coco.names"
+
+                SCORE_THRESH: 0.5
+                NMS_THRESH: 0.4
+                DEEPSORT: 'lib/backend/DeepSORT/deep/checkpoint/ckpt.t7'
+        NONE:
+                NAME: ''
+        
+
+# POSE_MODELS HYPER PARAMETERS
+POSE_MODELS:
+        HRPOSE:
+                NAME: 'HRPose'
+                C: 48
+                NUM_JOINTS: 17
+                CHECKPOINT_FILE: 'lib/backend/HRPose/weights/pose_hrnet_w48_384x288.pth'
+                MODEL_NAME: 'HRNet'
+                RESOLUTION:
+                        - 384
+                        - 288
+
+# PERSON_MATCHERS HYPER PARAMETERS
+PERSON_MATCHERS:
+        ITERATIVE:
+                NAME: 'Iterative'
+                CSA_CHECKPOINT_FILE: 'logs/market-ide-camstyle-re/checkpoint.pth.tar'
+                CSA_METRIC: 'geometry_mean'
+                CSA_GEO_METRIC: 'epipolar_line'
+                EPI_THRESHOLD: 25
+                INIT_THRESHOLD: 15
+                JOINT_THRESHOLD: 15
+                NUM_JOINTS: 17
+                INIT_METHOD: 'GD' # GD: Greedy, CSA: CamStyle, BIP: Binary Integer Program
+                N_INIT: 3
+                MAX_AGE: 10
+                W2D: 0.4
+                ALPHA2D: 30
+                W3D: 0.6
+                ALPHA3D: 0.25
+                LAMBDA_A: 3
+                LAMBDA_T: 5
+                SIGMA: 0.6
+                ARM_SIGMA: 0.8
