@@ -40,7 +40,6 @@ def eval_ivclabpose_PersonTrack_Project3DPose(cfg, inputs):
 		camera_parameter = pickle.load(f)
 
 	from ivclabpose import ivclabpose
-	from visualization import plot3DPose
 	from HRPose.misc.visualization import joints_dict, draw_points_and_skeleton
 	
 	pipeline       = cfg.PIPELINE_COMBINATION
