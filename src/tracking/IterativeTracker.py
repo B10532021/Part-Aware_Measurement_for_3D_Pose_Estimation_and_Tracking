@@ -111,47 +111,6 @@ class IterativeTracker(object):
                     track_id = max(self.tracks_ids) + 1
                 self.tracks.append(IterTrack(track_id, time, cameras, poses2d, pose3d, joints_views, self.args, self.build3D))
                 self.tracks_ids.add(track_id)
-       
-    def init_target_BIP(self, time):
-        if len(self.unmatched.keys()) < 2:
-            return
-        cameras = list()
-        poses = list()
-
-        fnames = list()
-        pids   = list()
-        cids   = list()
-        dimGroup = [0]
-        for cid, value in self.unmatched.items():
-            cameras.append(value['camera'])
-            count = 0
-            for pid, det in enumerate(value['detections']):
-                if get_believe(det) > 0.4:
-                    count += 1
-                    poses.append(det)
-            dimGroup.append(dimGroup[-1] + count)
-        if dimGroup[-1] == 0:
-            return
-    
-        matched_list, sub_imgid2cam = BIP_matching(IterativeTracker.BIPSolver, cameras, dimGroup, pose_mat=poses,
-                            num_joints=self.num_joints, threshold=self.epi_threshold)
-        for match in matched_list:
-            if len(match) < 2:
-                continue
-            cams = []
-            poses2d = []
-            for pid in match:
-                cid = sub_imgid2cam[pid]
-                cams.append(self.unmatched[cid]['camera'])
-                poses2d.append(poses[pid])
-
-            pose3d, _ = top_down_pose_kernel(cams, np.flip(np.array(poses2d)[:,:,:2], axis=2), np.array(poses2d)[:,:,2])
-            if len(self.tracks_ids) == 0:
-                    track_id = 0
-            else:
-                track_id = max(self.tracks_ids) + 1
-            self.tracks.append(IterTrack(track_id, time, cams, poses2d, pose3d, self.args, self.build3D))
-            self.tracks_ids.add(track_id)
 
     def tracking(self, frame_id, camera_list, frame_list, boxes_list, detections_list, build3D='TopDown'):
         """

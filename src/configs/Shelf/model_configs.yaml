@@ -64,7 +64,7 @@ PERSON_MATCHERS:
                 INIT_THRESHOLD: 30
                 JOINT_THRESHOLD: 60
                 NUM_JOINTS: 17
-                INIT_METHOD: 'GD' # GD: Greedy, CSA: CamStyle, BIP: Binary Integer Program
+                INIT_METHOD: 'GD' # GD: Greedy
                 N_INIT: 3
                 MAX_AGE: 10
                 W2D: 0.4
