@@ -81,6 +81,7 @@ ${ROOT}
             |   |-- camera_parameter.pickle
             |   |-- hdPose_stage1_coco19
             |-- ...
+    |-- src
 ```
 
 ## Backend Models
