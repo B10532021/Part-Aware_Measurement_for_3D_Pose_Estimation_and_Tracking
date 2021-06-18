@@ -37,13 +37,13 @@ OUTPUT: '../results/PersonPoseDetectResult'
 DETECT_MODELS:
         YOLOV3:
                 NAME: 'YOLOv3'
-                CFG: "lib/backend/YOLOv3/cfg/yolo_v3.cfg"
-                WEIGHT: "lib/backend/YOLOv3/weight/yolov3.weights"
-                CLASS_NAMES: "lib/backend/YOLOv3/cfg/coco.names"
+                CFG: "backend/YOLOv3/cfg/yolo_v3.cfg"
+                WEIGHT: "backend/YOLOv3/weight/yolov3.weights"
+                CLASS_NAMES: "backend/YOLOv3/cfg/coco.names"
 
                 SCORE_THRESH: 0.5
                 NMS_THRESH: 0.4
-                DEEPSORT: 'lib/backend/DeepSORT/deep/checkpoint/ckpt.t7'
+                DEEPSORT: 'backend/DeepSORT/deep/checkpoint/ckpt.t7'
         NONE:
                 NAME: ''
         
@@ -54,7 +54,7 @@ POSE_MODELS:
                 NAME: 'HRPose'
                 C: 48
                 NUM_JOINTS: 17
-                CHECKPOINT_FILE: 'lib/backend/HRPose/weights/pose_hrnet_w48_384x288.pth'
+                CHECKPOINT_FILE: 'backend/HRPose/weights/pose_hrnet_w48_384x288.pth'
                 MODEL_NAME: 'HRNet'
                 RESOLUTION:
                         - 384

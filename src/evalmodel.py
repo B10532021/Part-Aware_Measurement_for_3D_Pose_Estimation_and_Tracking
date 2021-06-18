@@ -114,11 +114,9 @@ def eval_ivclabpose_PersonTrack_Project3DPose(cfg, inputs):
 	avgtracktime = totaltimetrack /(test_end - test_start)
 	print ("Person Detect Processing time (s/f): %f" %(avgpersondetecttime))
 	print ("Pose Detect Processing time (s/f): %f" %(avgposedetecttime))
-	print ("Association Processing time (s/f): %f" %(avgassotime))
-	print ("Update 3D Processing time (s/f): %f" %(avgupdatetime))
-	print ("Initiate 3D Processing time (s/f): %f" %(avginittime))
 	print ("Track Processing time (s/f): %f" %(avgtracktime))
 	print ("fps: %f" %(1 / ((avgpersondetecttime + avgposedetecttime) / 3 + avgtracktime)))
+	print ("tracking fps: %f"%(1 / avgtracktime))
 
 def Evaluate3DPose_PCP(eval_ranges, pred_path, gt_path='CatchImage/CampusSeq1', dataset_name='CampusSeq1'):
 	'''

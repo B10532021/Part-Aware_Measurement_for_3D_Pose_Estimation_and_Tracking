@@ -1,5 +1,27 @@
 # Part-aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking
 
+## Campus PCP Score
+| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
+|    ----    |   ---   |   ---   |   ---   |   ---   |
+|    Head    |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
+| Upper arms |  98.98  |  100.00 |  100.00 |  99.66  |
+| Lower arms |  92.86  |  68.78  |  91.30  |  84.31  |
+| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
+| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Total    |  98.37  |  93.76  |  98.26  |  96.79  |
+
+## Shelf PCP Shelf
+| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
+|    ----    |   ---   |   ---   |   ---   |   ---   |
+|    Head    |  94.98  |  100.00 |  91.30  |  95.43  |
+|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
+| Upper arms |  100.00 |  100.00 |  96.27  |  98.76  |
+| Lower arms |  98.21  |  77.03  |  96.27  |  90.50  |
+| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
+| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Total    |  99.14  |  95.41  |  97.64  |  97.39  |
+
 ## Installation
 
  - Python 3.6+
@@ -63,7 +85,7 @@ ${ROOT}
 
 ## Backend Models
 Backend models, which is not our works, are released codes from others. We only did some small modifications to fit the format of our input/output.
-Put models in {ROOT}/src/leb/backend
+Put models in {ROOT}/src/backend
 1. YOLOv3
     - origin: https://github.com/ZQPei/deep_sort_pytorch
     - [modification](https://drive.google.com/drive/folders/16cPluYbBahb1wzN5CKfeBuJw9mzrFUJT?usp=sharing) 
@@ -83,6 +105,5 @@ python -W ignore testmodel.py --dataset Panoptic # For Panoptic (sub-dataset can
 ```bash
 $cd src
 python -W ignore evalmodel.py --dataset CampusSeq1 
-python -W ignore evalmodel.py --dataset Shelf 
-python -W ignore evalmodel.py --dataset Panoptic 
+python -W ignore evalmodel.py --dataset Shelf
 ```
