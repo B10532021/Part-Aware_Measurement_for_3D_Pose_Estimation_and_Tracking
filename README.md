@@ -108,3 +108,13 @@ $cd src
 python -W ignore evalmodel.py --dataset CampusSeq1 
 python -W ignore evalmodel.py --dataset Shelf
 ```
+```bash
+@InProceedings{Chu_2021_CVPR,
+    author    = {Chu, Hau and Lee, Jia-Hong and Lee, Yao-Chih and Hsu, Ching-Hsien and Li, Jia-Da and Chen, Chu-Song},
+    title     = {Part-Aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2021},
+    pages     = {1472-1481}
+}
+```
