@@ -1,7 +1,13 @@
 # Part-aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking
 > [Part-Aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking](https://openaccess.thecvf.com/content/CVPR2021W/AMFG/html/Chu_Part-Aware_Measurement_for_Robust_Multi-View_Multi-Human_3D_Pose_Estimation_and_CVPRW_2021_paper.html)
+
 > Hau Chu, Jia-Hong Lee, Yao-Chih Lee, Ching-Hsien Hsu, Jia-Da Li, Chu-Song Chen
 > 2021 CVPR B-AMFG Workshop
+
+> [Fast and Robust Multi-Person 3D Pose Estimation from Multiple Views](https://arxiv.org/pdf/1901.04111.pdf)  
+> Junting Dong, Wen Jiang, Qixing Huang, Hujun Bao, Xiaowei Zhou   
+> CVPR 2019 
+> [Project Page](https://zju3dv.github.io/mvpose/)
 
 ## Installation
 
