@@ -108,6 +108,8 @@ $cd src
 python -W ignore evalmodel.py --dataset CampusSeq1 
 python -W ignore evalmodel.py --dataset Shelf
 ```
+
+## Citation
 ```bash
 @InProceedings{Chu_2021_CVPR,
     author    = {Chu, Hau and Lee, Jia-Hong and Lee, Yao-Chih and Hsu, Ching-Hsien and Li, Jia-Da and Chen, Chu-Song},
