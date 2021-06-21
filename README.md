@@ -101,7 +101,7 @@ python -W ignore evalmodel.py --dataset Shelf
 | Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
 |   Total    |  98.37  |  93.76  |  98.26  |  96.79  |
 
-## Shelf PCP Shelf
+## Shelf PCP Score
 | Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
 |    ----    |   ---   |   ---   |   ---   |   ---   |
 |    Head    |  94.98  |  100.00 |  91.30  |  95.43  |
