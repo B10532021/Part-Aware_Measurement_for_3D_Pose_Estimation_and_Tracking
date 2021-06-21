@@ -1,26 +1,7 @@
 # Part-aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking
-
-## Campus PCP Score
-| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
-|    ----    |   ---   |   ---   |   ---   |   ---   |
-|    Head    |  100.00 |  100.00 |  100.00 |  100.00 |
-|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
-| Upper arms |  98.98  |  100.00 |  100.00 |  99.66  |
-| Lower arms |  92.86  |  68.78  |  91.30  |  84.31  |
-| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
-| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
-|   Total    |  98.37  |  93.76  |  98.26  |  96.79  |
-
-## Shelf PCP Shelf
-| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
-|    ----    |   ---   |   ---   |   ---   |   ---   |
-|    Head    |  94.98  |  100.00 |  91.30  |  95.43  |
-|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
-| Upper arms |  100.00 |  100.00 |  96.27  |  98.76  |
-| Lower arms |  98.21  |  77.03  |  96.27  |  90.50  |
-| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
-| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
-|   Total    |  99.14  |  95.41  |  97.64  |  97.39  |
+>[Part-Aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking](https://openaccess.thecvf.com/content/CVPR2021W/AMFG/html/Chu_Part-Aware_Measurement_for_Robust_Multi-View_Multi-Human_3D_Pose_Estimation_and_CVPRW_2021_paper.html)
+>Hau Chu, Jia-Hong Lee, Yao-Chih Lee, Ching-Hsien Hsu, Jia-Da Li, Chu-Song Chen
+>2021 CVPR B-AMFG Workshop
 
 ## Installation
 
@@ -108,6 +89,27 @@ $cd src
 python -W ignore evalmodel.py --dataset CampusSeq1 
 python -W ignore evalmodel.py --dataset Shelf
 ```
+## Campus PCP Score
+| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
+|    ----    |   ---   |   ---   |   ---   |   ---   |
+|    Head    |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
+| Upper arms |  98.98  |  100.00 |  100.00 |  99.66  |
+| Lower arms |  92.86  |  68.78  |  91.30  |  84.31  |
+| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
+| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Total    |  98.37  |  93.76  |  98.26  |  96.79  |
+
+## Shelf PCP Shelf
+| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
+|    ----    |   ---   |   ---   |   ---   |   ---   |
+|    Head    |  94.98  |  100.00 |  91.30  |  95.43  |
+|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
+| Upper arms |  100.00 |  100.00 |  96.27  |  98.76  |
+| Lower arms |  98.21  |  77.03  |  96.27  |  90.50  |
+| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
+| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Total    |  99.14  |  95.41  |  97.64  |  97.39  |
 
 ## Citation
 ```bash
