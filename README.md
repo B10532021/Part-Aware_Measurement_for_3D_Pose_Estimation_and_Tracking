@@ -2,6 +2,7 @@
 > [Part-Aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking](https://arxiv.org/abs/2106.11589)  
 > Hau Chu, Jia-Hong Lee, Yao-Chih Lee, Ching-Hsien Hsu, Jia-Da Li, Chu-Song Chen  
 > 2021 CVPR B-AMFG Workshop
+
 **Note:** It's a project of [AI^2 Lab](https://github.com/ivclab). The code will be update in [here](https://github.com/ivclab/Part-Aware_Measurement_for_3D_Pose_Estimation_and_Tracking) while there is a new version.
 
 ## Installation
