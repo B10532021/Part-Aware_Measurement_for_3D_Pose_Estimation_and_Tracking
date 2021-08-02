@@ -1,26 +1,9 @@
 # Part-aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking
+> [Part-Aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking](https://arxiv.org/abs/2106.11589)  
+> Hau Chu, Jia-Hong Lee, Yao-Chih Lee, Ching-Hsien Hsu, Jia-Da Li, Chu-Song Chen  
+> 2021 CVPR B-AMFG Workshop
 
-## Campus PCP Score
-| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
-|    ----    |   ---   |   ---   |   ---   |   ---   |
-|    Head    |  100.00 |  100.00 |  100.00 |  100.00 |
-|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
-| Upper arms |  98.98  |  100.00 |  100.00 |  99.66  |
-| Lower arms |  92.86  |  68.78  |  91.30  |  84.31  |
-| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
-| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
-|   Total    |  98.37  |  93.76  |  98.26  |  96.79  |
-
-## Shelf PCP Shelf
-| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
-|    ----    |   ---   |   ---   |   ---   |   ---   |
-|    Head    |  94.98  |  100.00 |  91.30  |  95.43  |
-|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
-| Upper arms |  100.00 |  100.00 |  96.27  |  98.76  |
-| Lower arms |  98.21  |  77.03  |  96.27  |  90.50  |
-| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
-| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
-|   Total    |  99.14  |  95.41  |  97.64  |  97.39  |
+**Note:** It's a project of [AI^2 Lab](https://github.com/ivclab). The code will be update in [here](https://github.com/ivclab/Part-Aware_Measurement_for_3D_Pose_Estimation_and_Tracking) while there is a new version.
 
 ## Installation
 
@@ -56,6 +39,8 @@ Download datasets:
 1. Campus (http://campar.in.tum.de/Chair/MultiHumanPose)
 2. Shelf (http://campar.in.tum.de/Chair/MultiHumanPose)
 3. CMU Panoptic (https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox)
+
+Dataset's camera_parameter.pickle [download](https://drive.google.com/drive/folders/1JUB4zmOJBZ78aTFCCeK2dn-HWR7dTFvB?usp=sharing)
 
 The directory tree should look like below:
 ```
@@ -107,4 +92,37 @@ python -W ignore testmodel.py --dataset Panoptic # For Panoptic (sub-dataset can
 $cd src
 python -W ignore evalmodel.py --dataset CampusSeq1 
 python -W ignore evalmodel.py --dataset Shelf
+```
+## Campus PCP Score
+| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
+|    ----    |   ---   |   ---   |   ---   |   ---   |
+|    Head    |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
+| Upper arms |  98.98  |  100.00 |  100.00 |  99.66  |
+| Lower arms |  92.86  |  68.78  |  91.30  |  84.31  |
+| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
+| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Total    |  98.37  |  93.76  |  98.26  |  96.79  |
+
+## Shelf PCP Score
+| Bone Group | Actor 0 | Actor 1 | Actor 2 | Average |
+|    ----    |   ---   |   ---   |   ---   |   ---   |
+|    Head    |  94.98  |  100.00 |  91.30  |  95.43  |
+|   Torso    |  100.00 |  100.00 |  100.00 |  100.00 |
+| Upper arms |  100.00 |  100.00 |  96.27  |  98.76  |
+| Lower arms |  98.21  |  77.03  |  96.27  |  90.50  |
+| Upper legs |  100.00 |  100.00 |  100.00 |  100.00 |
+| Lower legs |  100.00 |  100.00 |  100.00 |  100.00 |
+|   Total    |  99.14  |  95.41  |  97.64  |  97.39  |
+
+## Citation
+```bash
+@InProceedings{Chu_2021_CVPR,
+    author    = {Chu, Hau and Lee, Jia-Hong and Lee, Yao-Chih and Hsu, Ching-Hsien and Li, Jia-Da and Chen, Chu-Song},
+    title     = {Part-Aware Measurement for Robust Multi-View Multi-Human 3D Pose Estimation and Tracking},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2021},
+    pages     = {1472-1481}
+}
 ```
