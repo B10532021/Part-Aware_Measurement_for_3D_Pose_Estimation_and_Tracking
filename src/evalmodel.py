@@ -68,7 +68,7 @@ def eval_ivclabpose_PersonTrack_Project3DPose(cfg, inputs):
 			cameras = ivclabpose_model.GetCameraParameters(camera_parameter, imagelist[0].shape[0], imagelist[0].shape[1])
 
 		personstarttime = time.time()
-		person_bbox_list = ivclabpose_model.PersonDetect(imagelist, 3, frame_id)
+		person_bbox_list = ivclabpose_model.PersonDetect(imagelist, frame_id)
 		personendtime = time.time()
 
 		posestarttime = time.time()

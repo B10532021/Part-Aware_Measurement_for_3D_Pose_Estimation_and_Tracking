@@ -1,3 +1,4 @@
+src/visualization.py
 src/backend/HRPose
 src/backend/YOLOv3
 CatchImage/*

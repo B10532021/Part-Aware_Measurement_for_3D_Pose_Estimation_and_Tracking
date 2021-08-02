@@ -56,7 +56,7 @@ def test_ivclabpose_PersonTrack_Project3DPose(cfg, inputs):
 
 
 		personstarttime = time.time()
-		person_bbox_list = ivclabpose_model.PersonDetect(imagelist, 3, frame_id)
+		person_bbox_list = ivclabpose_model.PersonDetect(imagelist, frame_id)
 		personendtime = time.time()
 
 		posestarttime = time.time()

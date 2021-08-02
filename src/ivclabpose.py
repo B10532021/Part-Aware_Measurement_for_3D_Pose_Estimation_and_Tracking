@@ -180,7 +180,7 @@ class ivclabpose:
 			self.cameras.append(Camera(j, P[j], K[j], RT[j], F[j], w=im_width, h=im_height))
 		return self.cameras
 
-	def PersonDetect(self, imglist, camera_num, image_id):
+	def PersonDetect(self, imglist, image_id):
 		if self.person_detector.NAME == 'YOLOv3':
 			person_bbox_list = list()
 			results = self.bbox_detector(imglist)
