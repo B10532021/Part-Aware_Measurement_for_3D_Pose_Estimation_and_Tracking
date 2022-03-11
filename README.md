@@ -40,7 +40,7 @@ Download datasets:
 2. Shelf (http://campar.in.tum.de/Chair/MultiHumanPose)
 3. CMU Panoptic (https://github.com/CMU-Perceptual-Computing-Lab/panoptic-toolbox)
 
-Dataset's camera_parameter.pickle [download](https://drive.google.com/drive/folders/1JUB4zmOJBZ78aTFCCeK2dn-HWR7dTFvB?usp=sharing)
+Dataset's camera_parameter.pickle [download](https://drive.google.com/drive/u/0/folders/1U5t2yf_4vOjYVRrLRQgXghNEi6Axij16)
 
 The directory tree should look like below:
 ```
@@ -74,10 +74,10 @@ Backend models, which is not our works, are released codes from others. We only 
 Put models in {ROOT}/src/backend
 1. YOLOv3
     - origin: https://github.com/ZQPei/deep_sort_pytorch
-    - [modification](https://drive.google.com/drive/u/1/folders/1WQhNrY7k69maUFnjgLLeSbIKpa2Cbg1p) 
+    - [modification](https://drive.google.com/drive/u/0/folders/1egSyyoBT_yD2QSGP9LGHO8u5tsDvUoW3) 
 2. HRNet
     - origin: https://github.com/stefanopini/simple-HRNet
-    - [modification](https://drive.google.com/drive/u/1/folders/1ZpdwEbu5AAKTyCGanNRUMimdTgCraDrv) 
+    - [modification](https://drive.google.com/drive/u/0/folders/13Id5vBLI-YGV9f1TNKxj1XvGSuLozjVF) 
 
 ## Run Codes
 ### Demo
