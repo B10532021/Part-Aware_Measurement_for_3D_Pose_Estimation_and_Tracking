@@ -74,10 +74,10 @@ Backend models, which is not our works, are released codes from others. We only 
 Put models in {ROOT}/src/backend
 1. YOLOv3
     - origin: https://github.com/ZQPei/deep_sort_pytorch
-    - [modification](https://drive.google.com/drive/folders/16cPluYbBahb1wzN5CKfeBuJw9mzrFUJT?usp=sharing) 
+    - [modification](https://drive.google.com/drive/u/1/folders/1WQhNrY7k69maUFnjgLLeSbIKpa2Cbg1p) 
 2. HRNet
     - origin: https://github.com/stefanopini/simple-HRNet
-    - [modification](https://drive.google.com/drive/folders/19lLnky0JsV6IyfB4x-LTz2Azx4cuEi-L?usp=sharing) 
+    - [modification](https://drive.google.com/drive/u/1/folders/1ZpdwEbu5AAKTyCGanNRUMimdTgCraDrv) 
 
 ## Run Codes
 ### Demo
